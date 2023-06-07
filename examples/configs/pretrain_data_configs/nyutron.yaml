@@ -1,0 +1,69 @@
+dataset:
+  txt_column_name: sentences
+  name: nyu_notes
+
+clean_up:
+  include: False
+  input_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_set_2011_2020_may.csv
+  output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_set_2011_2020_may_text.csv
+  txt_col_name: text
+  test_load: False # disable load check for speedup
+  debug: False # for debug option, only load debug_nrows number of lines
+  debug_nrows: 100
+
+data_split:
+  include: False
+  input_path:  /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_set_2011_2020_may_text.csv
+  output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_split_prod
+  seed: 42
+  train_ratio: 0.949
+  val_ratio: 0.05
+
+sentencize:
+  include: False
+  input_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_split_prod
+  output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/nyu_notes/pretrain_split_sentences
+  splitter: nltk
+  batched: True
+  batch_size: 32
+  num_proc: 32
+  test_load: False # disable load check for speed up
+  
+train_tokenizer:
+  include: True
+  input_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_set_2011_2020_may_text.txt
+  output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/tokenizers/vocab50000wordpiece
+  csv2txt: # option for convert csv to txt
+    include: True
+    input_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_set_2011_2020_may_text.csv
+    output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/nyu_notes/pretrain_set_2011_2020_may_text.txt
+  vocab_size: 50000
+  min_frequency: 2
+  max_seq_len: 512
+  padding: False
+  special_tokens: [ "[SEP]", "[PAD]", "[UNK]", "[MASK]", "[CLS]" ]   # special tokens for BERT
+
+pretokenize:
+  include: True
+  input_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/nyu_notes/pretrain_split_sentences
+  tokenizer_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/tokenizers/vocab50000wordpiece
+  output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/nyu_notes/pretrain_split_tokenized_sentences
+  batched: True
+  num_proc: 32
+  batch_size: 128
+  max_seq_len: 512
+  text_column_name: sentences
+  padding: False # no pad to max len for faster speed
+  test_load: False
+
+group_tokens:
+  include: True
+  input_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/nyu_notes/pretrain_split_tokenized_sentences
+  output_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/nyu_notes/pretrain_split_grouped_tokenized_sentences
+  tokenizer_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/tokenizers/vocab50000wordpiece
+  max_seq_len: 512
+  batched: True
+  num_proc: 32
+  cache: False
+  test_load: False # disable load check for speedup
+  test_group: True # manually examine examples for sanity check

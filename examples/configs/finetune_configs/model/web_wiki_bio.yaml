@@ -1,0 +1,2 @@
+pretrained: web_wiki_bio
+path: dmis-lab/biobert-base-cased-v1.2

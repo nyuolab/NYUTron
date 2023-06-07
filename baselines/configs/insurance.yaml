@@ -1,0 +1,12 @@
+entity: lavender
+project: structured_los
+dataset_path: /gpfs/data/oermannlab/users/lavender/insurance_denial/data/structured/structured_task2_w_time
+keep_cols: ['label','medicare_ffs','ed_vs_non_ed','nyu_surgical_case___or_flag',
+            'enc___patient_type','enc___second_payor_plan_code_desc','name', 'age', 'postalcode',
+            'sex', 'brand', 'plan' ,'providerkey', 'type']
+feats:  ['age']
+categorical_feats:  ['medicare_ffs','ed_vs_non_ed','nyu_surgical_case___or_flag',
+                     'enc___patient_type','enc___second_payor_plan_code_desc','name', 
+                     'postalcode', 'sex', 'brand', 'plan' ,'providerkey', 'type']
+labels: ['label']
+objective: binary:logistic

@@ -1,0 +1,13 @@
+entity: lavender
+project: structured_mortality
+dataset_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/mortality_saps2_apache2/splits
+keep_cols: ['in_hospital_mortality','age','primaryspecialty','mean_heart_rate',
+            'temperature_abg','blood_urea_nitrogen','sodium',
+            'potassium','wbc','bilirubin','systolic_bp',
+            'creatine','hematocrit','ph']
+feats: ['age','mean_heart_rate','temperature_abg',
+        'blood_urea_nitrogen','sodium','potassium',
+        'wbc','bilirubin','systolic_bp','creatine','hematocrit','ph']
+categorical_feats: ['primaryspecialty']
+labels: ['in_hospital_mortality']
+objective: binary:logistic

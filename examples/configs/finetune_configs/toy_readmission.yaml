@@ -1,0 +1,7 @@
+defaults:
+  - data: toy_readmission
+  - model: toy_nyutron
+  - trainer: binary
+  - logger: readmission
+  - slurm: none #a100-all
+  - run: normal

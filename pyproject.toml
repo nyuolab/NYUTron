@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "nyutron"
+version = "0.0.1"
+authors = [
+  { name="Lavender Jiang", email="lyj2002@nyu.edu" },
+  { name="Xujin Liu", email="xl3942@nyu.edu" }
+]
+description = "Package for building and evaluating NYUTron, the clinical language model for NYU Langone."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+
+]
+
+[project.urls]
+"Homepage" = "https://github.com/nyuolab/NYUTron"
+"Bug Tracker" = "https://github.com/nyuolab/NYUTron/issues"

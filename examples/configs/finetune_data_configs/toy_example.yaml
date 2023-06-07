@@ -1,0 +1,23 @@
+clean_up:
+  txt_col_name: text
+  label_col_name: readmission
+  debug: False # for debug option, only load debug_nrows number of lines
+  debug_nrows: 100
+
+data_split:
+  seed: 42
+  train_ratio: 0.4
+  val_ratio: 0.4 # test ratio 0.1
+
+pretokenize:
+  tokenizer_path: ./data/pretrain/tokenizer_small_synthetic_clinical
+  batched: True
+  num_proc: 32
+  batch_size: 128
+  max_seq_len: 512
+  text_column_name: text
+  padding: False # no pad to max len for faster speed
+  test_load: False
+  truncation: True
+  return_special_tokens_mask: True
+  is_split_into_words: False

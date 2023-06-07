@@ -1,0 +1,33 @@
+debug: False
+load_trained: False # load trained model?
+resume: False # resume training from checkpoint?
+# previous checkpoint directory
+prev_ckpt: None #/gpfs/data/oermannlab/users/lavender/NYUTron_hf/src/pretrain_models/ckpt/nyu_ds_multi_node_27_06_2022_17_54_45
+# model to load from previous checkpoint directory
+prev_model: None #/gpfs/data/oermannlab/users/lavender/NYUTron_hf/src/pretrain_models/ckpt/nyu_ds_multi_node_27_06_2022_17_54_45/checkpoint-4000
+suffix: tisch_pretrain
+cuda_home: /gpfs/share/apps/cuda/11.4
+tokenizer_parallel: true
+
+data:
+  train_data: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/tisch_notes/pretrain_split_grouped_tokenized_sentences
+  tokenizer_dir: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/tokenizers/tisch_notes/vocab50000wordpiece
+  max_seq_len: 512
+  vocab_size: 50000
+  type_vocab_size: 2
+  mlm_prob: 0.15
+
+model:
+  n_attention_heads: 12
+  n_hidden_layers: 12
+  hidden_size: 768
+
+training:
+  fp16: True
+  n_epochs: 100
+  per_device_train_batch_size: 64
+  save_steps: 2000
+  save_total_limit: 3
+  deepspeed: configs/deepspeed_config_multinode.json
+  logging_steps: 500
+  prediction_loss_only: True

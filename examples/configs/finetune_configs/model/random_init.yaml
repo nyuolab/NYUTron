@@ -1,0 +1,2 @@
+pretrained: random_init
+path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/models/nyutron_small/no_pretrain

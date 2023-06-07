@@ -1,0 +1,16 @@
+p_eval: 0.5 # evaluate and save every other p epoch, p is a positive float
+lr: 2e-5
+num_train_epochs: 2 #10
+weight_decay: 0
+save_strategy: steps
+logging_strategy: steps
+logging_steps: 5
+eval_steps:  50 
+evaluation_strategy: steps
+per_device_train_batch_size: 4 #TODO: use 16 for ~100m-param model, 4 for gatortron
+per_device_eval_batch_size: 4 #TODO: use 16 for ~100m-param model, 4 for gatortron
+save_steps: 50 
+save_total_limit: 5
+metric: [roc_auc] # mean square error for regression
+early_stop: True
+gradient_accumulation_steps: 4

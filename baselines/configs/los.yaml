@@ -1,0 +1,11 @@
+entity: lavender
+project: structured_los
+dataset_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/los_lisbon_portugal/splits_binary
+keep_cols: ['gender','age','highestlevelofeducation','country','address',
+            'maritalstatus','admissiontype','derivedadmissionservicetype',
+            'procedurename','primaryspecialty','physician_id','admission_year',
+            'admission_day','admission_hour','cnt','label']
+feats:  ['age','admission_year','admission_day','admission_hour','cnt']
+categorical_feats:  ['gender','highestlevelofeducation','country','address','maritalstatus','admissiontype','derivedadmissionservicetype','procedurename','primaryspecialty','physician_id']
+labels: ['label']
+objective: binary:logistic

@@ -1,0 +1,8 @@
+entity: lavender
+project: structured_readmission
+dataset_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/raw/lace_features/splits
+keep_cols: ['length_of_stay','acute_visit', 'past_ed_visit', 'charles_comorbidity', 'readmission']
+feats: ['length_of_stay','acute_visit', 'past_ed_visit', 'charles_comorbidity']
+categorical_feats: []
+labels: ['readmission']
+objective: binary:logistic

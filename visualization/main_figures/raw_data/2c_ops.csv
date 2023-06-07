@@ -1,0 +1,21 @@
+,Number of Train Samples,Temporal (OVR) AUC,run_seed,task,data
+9,41842,0.8680651371976873,13,Insurance denial,Clinical Note + NYUTron
+27,334515,0.7862228387309675,36,LOS,Clinical Note + NYUTron
+26,334515,0.788539297450549,42,LOS,Clinical Note + NYUTron
+25,334515,0.7904493812471398,24,LOS,Clinical Note + NYUTron
+28,334515,0.786389010003079,13,LOS,Clinical Note + NYUTron
+8,41842,0.8701466984211252,0,Insurance denial,Clinical Note + NYUTron
+7,41842,0.8723346135926912,24,Insurance denial,Clinical Note + NYUTron
+29,334515,0.786915771125951,0,LOS,Clinical Note + NYUTron
+5,41842,0.873985506976797,42,Insurance denial,Clinical Note + NYUTron
+6,41842,0.8734165352378422,36,Insurance denial,Clinical Note + NYUTron
+4,41842,0.726535386650216,0,Insurance denial,Structured Features Baseline
+20,334515,0.6641444847447282,42,LOS,Structured Features Baseline
+21,334515,0.6642103877556906,36,LOS,Structured Features Baseline
+22,334515,0.6637198403103592,21,LOS,Structured Features Baseline
+23,334515,0.6641700769721619,13,LOS,Structured Features Baseline
+24,334515,0.6640844169682741,0,LOS,Structured Features Baseline
+3,41842,0.7160950834933202,13,Insurance denial,Structured Features Baseline
+2,41842,0.7257738398611534,21,Insurance denial,Structured Features Baseline
+1,41842,0.725227900535862,36,Insurance denial,Structured Features Baseline
+0,41842,0.7254626560870019,42,Insurance denial,Structured Features Baseline

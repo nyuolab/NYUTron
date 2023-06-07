@@ -1,0 +1,9 @@
+,Unnamed: 0,text,readmission,length_of_stay,acute_visit,past_ed_visit,charles_comorbidity
+0,0," Patient presented with fever, sore throat, and cough. Physical exam revealed swollen lymph nodes and a rash. Diagnosis of strep throat was made and patient was prescribed antibiotics.",1,26,0,2,2
+1,1," ""Patient is a 45-year-old male with a history of hypertension. Blood pressure is 140/90 mmHg. Patient is alert and oriented with no signs of distress.""",1,19,1,2,5
+2,2," Patient is a 45-year-old male with a history of hypertension and diabetes. He presented with chest pain and shortness of breath. Physical exam revealed a heart rate of 110 and a blood pressure of 140/90. Diagnosis is acute coronary syndrome. Treatment plan includes aspirin, beta blockers, and nitroglycerin.",1,15,1,2,3
+3,3," ""Patient is a 45-year-old male with a history of hypertension. Blood pressure was measured at 140/90 mmHg. Patient was counseled on lifestyle modifications and prescribed medication.""",0,8,1,3,0
+4,4, Patient presented with fever and cough. Vital signs were within normal limits. Patient was prescribed antibiotics and instructed to follow up in two days.,0,9,1,1,4
+5,5," Patient is an 18 year old male presenting with fever, sore throat, and congestion.",0,1,1,3,4
+6,6," ""Patient presented with a fever, sore throat, and headache. Exam revealed a swollen, tender lymph node. Patient has been prescribed antibiotics and advised to rest.""",0,2,1,2,5
+7,7," ""The patient is a 45-year-old female with a history of hypertension presenting with chest pain. On physical examination, the patient's BP is 175/90, HR is 78, and respiratory rate is 18. There is no fever or rash. Impression: Acute coronary syndrome.""",1,0,1,0,1

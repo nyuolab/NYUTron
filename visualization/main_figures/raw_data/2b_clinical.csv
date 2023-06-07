@@ -1,0 +1,21 @@
+,Number of Train Samples,Temporal (OVR) AUC,run_seed,task,data
+10,334515,0.951088545519348,42,In-hospital mortality,Clinical Note + NYUTron
+11,334515,0.9481607621203508,36,In-hospital mortality,Clinical Note + NYUTron
+12,334515,0.9493228073532382,24,In-hospital mortality,Clinical Note + NYUTron
+13,334515,0.948153041327749,13,In-hospital mortality,Clinical Note + NYUTron
+14,334515,0.9521574948351346,0,In-hospital mortality,Clinical Note + NYUTron
+15,334515,0.8750592730625198,42,In-hospital mortality,Structured Features Baseline
+16,334515,0.8578701204413208,0,In-hospital mortality,Structured Features Baseline
+17,334515,0.8435494299650556,21,In-hospital mortality,Structured Features Baseline
+18,334515,0.8803241535713333,36,In-hospital mortality,Structured Features Baseline
+19,334515,0.8812408480453661,13,In-hospital mortality,Structured Features Baseline
+40,362259,0.7451226580035225,42,Readmission,Structured Features Baseline
+37,362259,0.7986812155157096,-1,Readmission,Clinical Note + NYUTron
+42,362259,0.7449763839977189,21,Readmission,Structured Features Baseline
+43,362259,0.7452184968265424,13,Readmission,Structured Features Baseline
+36,362259,0.7978493500135662,-1,Readmission,Clinical Note + NYUTron
+35,362259,0.8020372804291412,-1,Readmission,Clinical Note + NYUTron
+38,362259,0.7991662881525783,-1,Readmission,Clinical Note + NYUTron
+39,362259,0.7981342838902455,-1,Readmission,Clinical Note + NYUTron
+41,362259,0.7453568008967204,36,Readmission,Structured Features Baseline
+44,362259,0.745056210053735,0,Readmission,Structured Features Baseline

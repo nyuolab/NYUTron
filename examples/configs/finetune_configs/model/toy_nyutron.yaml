@@ -1,0 +1,2 @@
+pretrained: synthetic_toy
+path: data/pretrain_ckpt/toy_example/checkpoint-1

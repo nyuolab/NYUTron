@@ -1,0 +1,2 @@
+pretrained: web_wiki_bio_clinical
+path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/models/ngc_models/gatortron-og

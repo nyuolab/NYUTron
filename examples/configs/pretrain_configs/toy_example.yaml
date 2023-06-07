@@ -1,0 +1,32 @@
+debug: False
+load_trained: False # load trained model?
+resume: False # resume training from checkpoint?
+# previous checkpoint directory
+prev_ckpt: None # /gpfs/data/oermannlab/users/lavender/NYUTron_hf/src/pretrain_models/ckpt/nyu_ds_multi_node_15_07_2022_16_19_34 
+# model to load from previous checkpoint directory
+prev_model: None # /gpfs/data/oermannlab/users/lavender/NYUTron_hf/src/pretrain_models/ckpt/nyu_ds_multi_node_15_07_2022_16_19_34/checkpoint-1494000 
+suffix: all_100m
+cuda_home: /gpfs/share/apps/cuda/11.8
+tokenizer_parallel: true
+
+data:
+  train_data: data/pretrain/tokenized_small_synthetic_clinical #/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/nyu_notes/pretrain_split_prod_deid/grouped_tokenized_sentences_debug/ 
+  tokenizer_dir: data/pretrain/tokenizer_small_synthetic_clinical
+  max_seq_len: 512
+  type_vocab_size: 2
+  mlm_prob: 0.15
+
+model:
+  n_attention_heads: 2 # 12
+  n_hidden_layers: 2 # 12
+  hidden_size: 128 # 768
+
+training:
+  fp16: True # turn off fp16 to prevent loss overflow
+  n_epochs: 1
+  per_device_train_batch_size: 1 #64
+  save_steps: 1 #2000
+  save_total_limit: 3
+  deepspeed: configs/pretrain_configs/deepspeed_config_multinode.json
+  logging_steps: 1 #500
+  prediction_loss_only: True

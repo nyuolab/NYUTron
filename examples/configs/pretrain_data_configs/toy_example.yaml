@@ -1,0 +1,41 @@
+clean_up:
+  txt_col_name: text
+  test_load: False # disable load check for speedup
+  debug: False # for debug option, only load debug_nrows number of lines
+  debug_nrows: 100
+
+data_split:
+  seed: 42
+  train_ratio: 0.5
+  val_ratio: 0.25
+
+sentencize:
+  splitter: nltk
+  batched: True
+  batch_size: 32
+  num_proc: 32
+  test_load: False # disable load check for speed up
+  
+train_tokenizer:
+  vocab_size: 1000
+  min_frequency: 2
+  max_seq_len: 512
+  padding: False
+  special_tokens: [ "[SEP]", "[PAD]", "[UNK]", "[MASK]", "[CLS]" ]   # special tokens for BERT
+
+pretokenize:
+  batched: True
+  num_proc: 32
+  batch_size: 128
+  max_seq_len: 512
+  text_column_name: sentences
+  padding: False # no pad to max len for faster speed
+  test_load: False
+
+group_tokens:
+  max_seq_len: 512
+  batched: True
+  num_proc: 32
+  cache: False
+  test_load: False # disable load check for speedup
+  test_group: True # manually examine examples for sanity check

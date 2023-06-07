@@ -1,0 +1,41 @@
+,data/num_train_samples,run/seed,test/roc_auc,data/tokenized_data_path,pretrained
+0,42180,36,0.6449237795469974,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+1,10000,24,0.596637547479984,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+2,100,36,0.5166167320305443,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+3,42180,42,0.6390533739543183,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+4,42180,24,0.6422402136529151,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+5,42180,13,0.6258100351786706,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+6,42180,0,0.6240039723283567,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+7,10000,42,0.604180763382763,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+8,10000,36,0.591272659945128,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+9,10000,13,0.5776197449406115,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+10,10000,0,0.5915588022420091,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+11,1000,42,0.5293806421930843,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+12,1000,24,0.5364102046197954,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+13,1000,36,0.5603951007950267,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+14,1000,0,0.5603488130705312,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+15,1000,13,0.5216317965808801,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+16,100,42,0.4802732939466878,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+17,100,13,0.5209616064365186,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+18,100,24,0.5017589335308277,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+19,100,0,0.5605457462983847,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized_bioclinical,bioclinicalBert
+20,100,13,0.5368321242418632,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+21,42180,42,0.6699898447537774,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+22,42180,36,0.6730296858606432,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+23,42180,24,0.6657728927864088,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+24,42180,13,0.6745925277586081,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+25,42180,0,0.6703952130076922,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+26,10000,42,0.649081258801681,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+27,10000,36,0.6575325556995618,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+28,10000,24,0.6408451296897881,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+29,10000,13,0.6617152828039701,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+30,10000,0,0.6556067058288869,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+31,1000,42,0.5830934787609479,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+32,1000,36,0.5768485633973507,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+33,1000,24,0.572166209400055,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+34,1000,13,0.5080361100357398,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+35,100,42,0.5067282714199951,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+36,1000,0,0.548845331672586,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+37,100,36,0.4906897151481488,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+38,100,24,0.45972519118232874,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)
+39,100,0,0.5255494212631779,/gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/mimic_readmission/tokenized,nyutron (ours)

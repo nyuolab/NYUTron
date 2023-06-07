@@ -1,0 +1,19 @@
+,name,eval/roc_auc,department,oncology,count,readmit_rate,readmission_rate
+8,Neurology-no,0.9011541149952484,Neurology,None-oncology,1936,0.1621900826446281,     16.22%
+9,CT_Surgery-no,0.831779352962559,CT_Surgery,None-oncology,926,0.1511879049676026,     15.12%
+4,Rehabilitation-no,0.8188380205865886,Rehabilitation,None-oncology,904,0.17146017699115043,     17.15%
+14,Neurosurgery-no,0.788342290202563,Neurosurgery,None-oncology,1072,0.2294776119402985,     22.95%
+13,Orthopedic_Surgery-no,0.7811142296897227,Orthopedic_Surgery,None-oncology,1802,0.06881243063263041,      6.88%
+2,Plastic_Surgery-no,0.7809419496166484,Plastic_Surgery,None-oncology,260,0.04230769230769231,      4.23%
+17,Ob_Gyn-no,0.780609337936238,Ob_Gyn,None-oncology,8094,0.024215468248085,      2.42%
+12,Pediatrics-yes,0.7751427316644708,Pediatrics,oncology subspecialty,168,0.4107142857142857,     41.07%
+11,Pediatrics-no,0.7627283378909694,Pediatrics,None-oncology,9856,0.03216314935064935,      3.22%
+0,Otolaryngology-no,0.7544273907910272,Otolaryngology,None-oncology,135,0.1037037037037037,     10.37%
+6,Urology-no,0.7522083179977916,Urology,None-oncology,538,0.08178438661710037,      8.18%
+5,Emergency_Medicine-no,0.7448873300721245,Emergency_Medicine,None-oncology,1167,0.12767780634104542,     12.77%
+15,Surgery-no,0.7354001184035971,Surgery,None-oncology,6046,0.12041018855441614,     12.04%
+18,Ob_Gyn-yes,0.7011303191489362,Ob_Gyn,oncology subspecialty,204,0.0784313725490196,      7.84%
+1,Psychiatry-no,0.6812428425049726,Psychiatry,None-oncology,753,0.06241699867197875,      6.24%
+19,Medicine-no,0.6795473761730341,Medicine,None-oncology,18702,0.1697144690407443,     16.97%
+7,Urology-yes,0.6560130010834236,Urology,oncology subspecialty,155,0.08387096774193549,      8.39%
+20,Medicine-yes,0.6377038043478261,Medicine,oncology subspecialty,481,0.33471933471933474,     33.47%

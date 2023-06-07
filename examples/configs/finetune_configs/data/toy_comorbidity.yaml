@@ -1,0 +1,9 @@
+tokenized_data_path: data/finetune/toy_comorbidity/tokenized
+num_label: 4 # for classification
+truncation: True
+is_split_into_words: False
+max_length: 512
+num_train_samples: 
+num_eval_samples: 
+tokenizer:
+  path: data/pretrain/tokenizer_small_synthetic_clinical

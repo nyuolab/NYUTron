@@ -1,0 +1,47 @@
+tokenize:
+  load_path: i2b2_2012_load.py
+  tokenizer_path: ../data/pretrain/tokenizer_small_synthetic_clinical
+  batched: True
+  num_proc: 8
+  batch_size: 8
+  max_seq_len: 512
+  text_column_name: texts
+  label_column_name: ner_tags
+  special_token_id: -100
+  padding: False # no pad to max len for faster speed
+  truncation: True
+  return_special_tokens_mask: True
+  is_split_into_words: True
+  ckpt_dir: ../data/finetune/toy_i2b2
+  test_load: True
+
+data:
+  label_col_name: ner_tags
+  tokenized_data_path: data/finetune/toy_i2b2
+  num_label: 2 # for toy dataset, only B-OCCURRENCE and O, normal data should have 13 types of labels
+
+model:
+  name: toy
+  path: data/pretrain_ckpt/toy_example/checkpoint-1
+
+tokenizer:
+  path: data/pretrain/tokenizer_small_synthetic_clinical
+
+trainer:
+  lr: 2e-5
+  num_train_epochs: 10
+  weight_decay: 0.01
+  save_strategy: steps
+  logging_strategy: steps
+  logging_steps: 1
+  eval_steps:  1
+  evaluation_strategy: steps
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  save_steps: 1
+  save_total_limit: 5
+  early_stop: True
+
+
+
+

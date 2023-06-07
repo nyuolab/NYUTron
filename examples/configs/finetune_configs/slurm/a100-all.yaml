@@ -1,0 +1,16 @@
+# @package _global_
+defaults:
+  - override /hydra/launcher: submitit_slurm
+
+hydra:
+  launcher:
+    partition: "oermannlab"
+
+    nodes: 1
+    gres: "gpu:a100:8"
+    cpus_per_task: 24
+    mem_per_cpu: 4G
+
+    qos: qos_free
+    additional_parameters:
+      time: 1-00:00:00

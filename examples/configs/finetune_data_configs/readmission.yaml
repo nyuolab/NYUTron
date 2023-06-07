@@ -1,0 +1,23 @@
+clean_up:
+  txt_col_name: text
+  label_col_name: readmitted_in_30_days
+  debug: False # for debug option, only load debug_nrows number of lines
+  debug_nrows: 100
+
+data_split:
+  seed: 42
+  train_ratio: 0.8
+  val_ratio: 0.1 # test ratio 0.1
+
+pretokenize:
+  tokenizer_path: /gpfs/data/oermannlab/users/lavender/NYUTron_hf/data/processed/tokenizers/vocab50000wordpiece
+  batched: True
+  num_proc: 32
+  batch_size: 128
+  max_seq_len: 512
+  text_column_name: text
+  padding: False # no pad to max len for faster speed
+  test_load: False
+  truncation: True
+  return_special_tokens_mask: True
+  is_split_into_words: False
