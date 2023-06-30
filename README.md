@@ -20,7 +20,7 @@ See [documentation/experiment_and_scripts.md](documentation/experiment_and_scrip
 
 Installation: see [documentation/installation.md](documentation/installation.md)
 
-Deployment: Models were deployed utilizing a modified version of [NVIDIA's TRITON Inference Server](https://github.com/triton-inference-server/server). Please see manuscript for details.
+Deployment: Models were deployed utilizing a modified version of [NVIDIA's TRITON Inference Server](https://github.com/triton-inference-server/server). The code is available at [NYUTriton](NYUTriton). Please see manuscript for details.
 
 ---
 

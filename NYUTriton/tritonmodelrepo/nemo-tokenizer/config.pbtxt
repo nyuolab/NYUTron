@@ -1,0 +1,27 @@
+name: "nemo-tokenizer"
+backend: "python"
+max_batch_size: 1
+
+input [
+  {
+    name: "rawtext"
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  } 
+]
+
+output [
+ {
+    name: "textout"
+    data_type: TYPE_STRING
+    dims: [1 ]
+ }
+
+]
+
+instance_group [
+ {
+   count: 1
+   kind: KIND_GPU
+ }
+]

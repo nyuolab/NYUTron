@@ -1,0 +1,38 @@
+name: "nemo-tokenizer"
+backend: "python"
+max_batch_size: 1
+
+input [
+  {
+    name: "payload"
+    data_type: TYPE_INT8
+    dims: [ -1 ]
+  } ,
+  {
+    name: "prefix"
+    data_type: TYPE_INT64
+    dims: [ -1 ]
+  }
+   ,
+  {
+    name: "model_mode"
+    data_type: TYPE_INT64
+    dims: [  1 ]
+  }
+]
+
+output [
+ {
+    name: "logits"
+    data_type: TYPE_FP32
+    dims: [2 ]
+ }
+
+]
+
+instance_group [
+ {
+   count: 1
+   kind: KIND_GPU
+ }
+]

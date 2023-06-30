@@ -1,0 +1,27 @@
+name: '{{model_name}}'
+backend: "python"
+max_batch_size: {{max_batch_size}}
+
+input [
+  {
+    name: '{{input_name}}'
+    data_type: TYPE_STRING
+    dims: [ 1 ]
+  } 
+]
+
+output [
+ {
+    name: '{{output_name}}'
+    data_type: TYPE_STRING
+    dims: [1 ]
+ }
+
+]
+
+instance_group [
+ {
+   count: 1
+   kind: KIND_GPU
+ }
+]
