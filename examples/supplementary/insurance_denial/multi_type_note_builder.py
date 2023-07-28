@@ -10,11 +10,13 @@ Dataset for predicting different types of insurance denial from discharge notes 
 """
 
 _LOCAL_PATHS = {
+    "dummy_denials": "./use-case-claims-denials/dummy_notes",
     "tiny_denials": "/gpfs/data/oermannlab/users/lavender/use-case-nyu-claims-denials/tiny_notes",
     "claims_denials": "/gpfs/data/oermannlab/users/lavender/use-case-nyu-claims-denials/notes",
 }
 
-_LABEL_PATH = "/gpfs/data/oermannlab/users/lavender/use-case-nyu-claims-denials/All_Campus_Denial_Data_for_Model_Summary_Final_V2.xlsx"
+_LABEL_PATH = "./use-case-claims-denials/dummy_denial_data.xlsx"
+#"/gpfs/data/oermannlab/users/lavender/use-case-nyu-claims-denials/All_Campus_Denial_Data_for_Model_Summary_Final_V2.xlsx"
 _HOMEPAGE = ""
 _LICENSE = ""
 _CITATION = ""
@@ -74,6 +76,17 @@ class MultiNoteReadmissionPrediction(datasets.GeneratorBasedBuilder):
     """Predicting readmission from some context"""
     VERSION = datasets.Version("1.0.0")
     BUILDER_CONFIGS = [
+        MultiNoteConfig(
+            name="dummy",
+            version=VERSION,
+            description="synthetic dummy dataset for demo",
+            note_type=["H&P"], #["Discharge Narrative"]
+            label_map=task1_map,
+            trunc_len=400,
+            notes_path=_LOCAL_PATHS["dummy_denials"],
+            label_path=_LABEL_PATH,
+            nrows=-1,
+        ),
         MultiNoteConfig(
             name="debug",
             version=VERSION,
@@ -164,7 +177,7 @@ class MultiNoteReadmissionPrediction(datasets.GeneratorBasedBuilder):
         ),
     ]
 
-    DEFAULT_CONFIG_NAME = "debug"  # It's not mandatory to have a default configuration. Just use one if it make sense.
+    DEFAULT_CONFIG_NAME = "dummy"  # It's not mandatory to have a default configuration. Just use one if it make sense.
 
     def _info(self):
         n_note_types = len(self.config.note_type)
@@ -220,32 +233,37 @@ class MultiNoteReadmissionPrediction(datasets.GeneratorBasedBuilder):
         # can pass in any argument, as long as it's specified in gen_kwargs
         # The `key` is for legacy reasons (tfds) and is not important in itself, but must be unique for each example.
         # 1. iterate through the notes folder
-        print("generating examples....")
+        print(f"generating examples.... notes_path is {notes_path}")
         idx = 0
         label_df = pd.read_excel(_LABEL_PATH)
         for dirpath, dirnames, filenames in os.walk(notes_path):
             for subdir in dirnames:
+                print(f'subdir is {subdir}')
                 subdir_path = os.path.join(dirpath, subdir)
                 for file in os.listdir(subdir_path):
                     filename = os.fsdecode(file)
+                    print(f'filename is {filename}') #
                     file_type = filename.split("_")[0]
                     csn = filename.split("_")[-1]
                     # 2. Indexing the labels file for the corresponding single label (TODO: specify label type in init)
                     label_raw = label_df[label_df.CSN == int(csn)]["Denial Type"].item()
+                    print(f'label_raw is {label_raw}')
                     label = label_map(label_raw)
-                    date = label_df.CSN == int(csn)["Enc - Admission Date"].item()
-                    if label < 0:
+                    print(f'csn is {csn}, label is {label}')
+                    date = label_df[label_df.CSN == int(csn)]["Enc - Admission Date"].item()
+                    if label < 0: #
                         continue
                     # SINGLE TYPE SINGLE LABEL Handling
                     # 3. for each encounter_csn, get the desired type of note. For empty note throw a warning
+                    print(f'file_type is {file_type}, note_type is {note_type}')
                     if file_type in note_type:
                         with open(os.path.join(subdir_path, filename)) as f:
                             note_content = f.read()
+                            print(f'reading file {filename}, note_content is {note_content}')
                             # 4. yield text and label
                             yield idx, {
                                 "text": note_content,
                                 "label": label,
-                                "date": date,
                             }
                             idx = idx + 1
                             found = True
